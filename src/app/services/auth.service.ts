@@ -10,7 +10,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  AUTH_SERVER: string = 'http://localhost:4200';
+  AUTH_SERVER: string = 'http://localhost:3000';
   authSubject = new BehaviorSubject(false);
   private token: string;
   constructor(private httpClient: HttpClient) { }
@@ -39,13 +39,13 @@ export class AuthService {
 
   logout(){
     this.token = null;
-    localStorage.removeItem("ACCES_TOKEN");
+    localStorage.removeItem("ACCESS_TOKEN");
     localStorage.removeItem("EXPIRES_IN");
   }
 
-  private saveToken(token: string, expiresIn: string): void{
-    localStorage.setItem("ACCES_TOKEN", token);
-    localStorage.setItem("EXPIRES_IN", expiresIn);
+  private saveToken(token: string, expiresToken: string): void{
+    localStorage.setItem("ACCESS_TOKEN", token);
+    localStorage.setItem("EXPIRES_IN", expiresToken);
     this.token = token;
   }
 
