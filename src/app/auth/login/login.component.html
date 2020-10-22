@@ -1,9 +1,9 @@
-<div class = "container">
+<div class="conteiner">
   <body class="align">
 
     <div class="grid">
 
-      <form #frmLogin="ngForm" action="https://httpbin.org/post" method="POST" class="form login" (ngSubmit)="onLogin(frmLogin)">
+      <form #frmLogin="ngForm" action="https://httpbin.org/post" method="POST" class="form login"(ngSubmit) = "onLogin(frmLogin)">
 
         <div class="form__field">
           <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Username</span></label>
